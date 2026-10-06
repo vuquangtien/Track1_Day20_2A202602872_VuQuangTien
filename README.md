@@ -3,7 +3,7 @@
 - **Họ tên:** Vũ Quang Tiến
 - **MHV:** 2A202602872
 - **Dự án chọn làm:** AI Personal Assistant for Students
-- **Metrics Pack (bản trình bày):** [metrics-pack.html](./metrics-pack.html)
+- **Metrics Pack (bản trình bày):** [Xem trên GitHub Pages](https://vuquangtien.github.io/Track1_Day20_2A202602872_VuQuangTien/metrics-pack.html)
 - **Metrics Pack (bản nội dung):** [metrics-pack.md](./metrics-pack.md)
 - **AI Support Log:** [ai-support-log.md](./ai-support-log.md)
 
