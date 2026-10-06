@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Metrics Pack — AI Personal Assistant for Students</title>
+  <style>
+    :root { --ink:#17212b; --muted:#5d6874; --line:#d9e0e5; --paper:#f7f9fa; --card:#fff; --navy:#143b58; --blue:#1e78b4; --teal:#167b73; --amber:#a66000; --soft-blue:#eaf4fb; --soft-teal:#e8f5f2; --soft-amber:#fff4df; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:16px/1.55 Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    main { max-width:1120px; margin:0 auto; padding:48px 28px 72px; }
+    .eyebrow { margin:0 0 8px; color:var(--blue); font-size:.78rem; font-weight:800; letter-spacing:.09em; text-transform:uppercase; }
+    h1 { max-width:850px; margin:0; color:var(--navy); font-size:clamp(2rem,5vw,4rem); letter-spacing:-.045em; line-height:1.05; }
+    h2 { margin:0; color:var(--navy); font-size:1.45rem; letter-spacing:-.02em; }
+    h3 { margin:0 0 8px; font-size:1rem; }
+    p { margin:0 0 12px; }
+    .subtitle { max-width:760px; margin:18px 0 0; color:var(--muted); font-size:1.08rem; }
+    .meta, .grid { display:grid; gap:16px; }
+    .meta { grid-template-columns:repeat(3,1fr); margin:30px 0 40px; }
+    .grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px; }
+    .meta .card { border-top:4px solid var(--blue); }
+    .label { margin:0 0 4px; color:var(--muted); font-size:.78rem; font-weight:750; text-transform:uppercase; letter-spacing:.07em; }
+    .value { margin:0; font-weight:700; }
+    section { margin-top:24px; background:var(--card); border:1px solid var(--line); border-radius:18px; padding:28px; }
+    .section-top { display:flex; gap:18px; align-items:flex-start; margin-bottom:22px; }
+    .num { display:grid; flex:0 0 auto; place-items:center; width:38px; height:38px; border-radius:50%; background:var(--navy); color:#fff; font-size:.9rem; font-weight:800; }
+    .section-top p { margin:4px 0 0; color:var(--muted); }
+    .key { padding:18px; background:var(--soft-blue); border-left:4px solid var(--blue); border-radius:8px; }
+    .key strong { color:var(--navy); }
+    .flow { display:flex; align-items:stretch; gap:8px; overflow-x:auto; padding:2px 0 10px; }
+    .flow-step { min-width:150px; padding:14px; border-radius:10px; background:var(--soft-teal); color:#124e49; font-weight:700; text-align:center; }
+    .arrow { align-self:center; color:var(--teal); font-size:1.4rem; font-weight:700; }
+    .metric { border-radius:12px; padding:18px; background:var(--soft-amber); }
+    .metric .label { color:#76511c; }
+    .metric strong { color:#6d4100; font-size:1.15rem; }
+    table { width:100%; border-collapse:collapse; font-size:.92rem; }
+    th, td { padding:12px 10px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; }
+    th { color:var(--muted); font-size:.77rem; letter-spacing:.05em; text-transform:uppercase; }
+    tr:last-child td { border-bottom:0; }
+    .table-wrap { overflow-x:auto; }
+    .check { list-style:none; padding:0; margin:0; }
+    .check li { display:flex; gap:9px; margin:9px 0; }
+    .check li::before { content:"✓"; display:grid; place-items:center; flex:0 0 auto; width:22px; height:22px; border-radius:50%; background:var(--soft-teal); color:var(--teal); font-size:.82rem; font-weight:800; }
+    code { padding:.12em .35em; border-radius:4px; background:#edf1f3; color:#26445a; font-size:.87em; }
+    .note { margin-top:18px; padding:14px 16px; border-radius:8px; background:#fff9ef; color:#654414; }
+    footer { margin-top:28px; color:var(--muted); font-size:.9rem; text-align:center; }
+    @media (max-width:700px) { main { padding:28px 16px 48px; } .meta,.grid { grid-template-columns:1fr; } section { padding:20px; } .flow-step { min-width:135px; } }
+    @media print { body { background:#fff; font-size:12px; } main { max-width:none; padding:18px; } section { break-inside:avoid; margin-top:14px; } .meta { margin:18px 0; } }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Day 20 · Product Metrics Lab</p>
+    <h1>Metrics Pack</h1>
+    <p class="subtitle">AI Personal Assistant for Students — đo giá trị bằng tiến độ học tập đúng hạn, không phải lượt mở app hay số câu hỏi AI.</p>
+
+    <div class="meta" aria-label="Thông tin phạm vi">
+      <article class="card"><p class="label">Persona</p><p class="value">Sinh viên đại học năm 1–3 tự quản lý nhiều deadline</p></article>
+      <article class="card"><p class="label">Core job</p><p class="value">Biết việc nào cần làm trước và hoàn thành đúng hạn</p></article>
+      <article class="card"><p class="label">Natural cadence</p><p class="value">Theo tuần học, ở cấp mỗi sinh viên</p></article>
+    </div>
+
+    <section>
+      <div class="section-top"><div class="num">01</div><div><h2>Core action</h2><p>Hành vi gần nhất với giá trị cốt lõi.</p></div></div>
+      <div class="key"><strong>Core action:</strong> Sinh viên hoàn thành và xác nhận hoàn thành một nhiệm vụ học tập đã được AI lập kế hoạch, trước hoặc đúng deadline.</div>
+      <div class="grid" style="margin-top:16px">
+        <article class="card"><h3>Đối tượng & điều kiện</h3><p><strong>Object:</strong> một <code>study_task</code> có deadline và nằm trong kế hoạch AI đã được xác nhận.</p><p><strong>Precondition:</strong> task đã được thêm/đồng bộ, có <code>due_at</code>, và có <code>plan_id</code> xác nhận.</p></article>
+        <article class="card"><h3>Quy tắc hoàn tất & bằng chứng</h3><p><strong>Complete:</strong> chuyển từ <code>incomplete</code> sang <code>completed</code>, với <code>completed_at ≤ due_at</code>.</p><p><strong>Value event:</strong> <code>planned_task_completed_on_time</code>.</p></article>
+      </div>
+      <ul class="check" style="margin-top:18px"><li>Gần core value</li><li>Lặp lại theo deadline</li><li>Quan sát được bằng trạng thái và timestamp</li><li>Có ý nghĩa với tiến độ học tập</li><li>Team có thể tác động bằng chất lượng kế hoạch</li></ul>
+    </section>
+
+    <section>
+      <div class="section-top"><div class="num">02</div><div><h2>Nature → cadence</h2><p>Nhu cầu có trước notification; notification chỉ khuếch đại.</p></div></div>
+      <div class="grid">
+        <article class="card"><h3>Natural trigger</h3><p>Giảng viên giao bài, quiz, deadline mới hoặc sinh viên rà kế hoạch tuần.</p></article>
+        <article class="card"><h3>Value timing</h3><p>Giá trị tích lũy, rõ nhất khi task hoàn thành đúng hạn và sinh viên thấy tiến độ tuần.</p></article>
+        <article class="card"><h3>State được lưu</h3><p>Task, deadline, ưu tiên, lịch học, trạng thái hoàn thành, workload và lịch sử.</p></article>
+        <article class="card"><h3>Repeat condition</h3><p>Mỗi tuần học lại có bài tập, buổi ôn hoặc deadline cần ưu tiên.</p></article>
+      </div>
+      <p class="note"><strong>Kết luận:</strong> Core action xuất hiện nhiều lần trong một tuần học vì lịch môn học và deadline có nhịp tuần. Đo theo tuần học ở cấp sinh viên; không ép daily habit.</p>
+    </section>
+
+    <section>
+      <div class="section-top"><div class="num">03</div><div><h2>Metric system</h2><p>Core action trở thành bộ đo có thể tính.</p></div></div>
+      <div class="grid">
+        <article class="metric"><p class="label">Activation</p><strong>Hoàn thành đúng hạn task đã nằm trong plan AI trong 7 ngày sau <code>account_created</code>.</strong></article>
+        <article class="metric"><p class="label">North Star Metric</p><strong>Số sinh viên mỗi tuần hoàn thành ≥2 task AI-planned đúng hạn.</strong></article>
+      </div>
+      <div class="grid" style="margin-top:16px">
+        <article class="card"><h3>Engagement</h3><p><strong>Frequency:</strong> số task hoàn thành đúng hạn trung vị / sinh viên active / tuần.</p><p><strong>Depth:</strong> tỷ lệ task trong plan được hoàn thành đúng hạn.</p></article>
+        <article class="card"><h3>Leading indicators</h3><p>Thêm/đồng bộ ≥3 task có deadline trong 48 giờ; xác nhận plan AI; bắt đầu task ≥24 giờ trước deadline.</p></article>
+        <article class="card"><h3>Counter-metric</h3><p>Tỷ lệ gợi ý AI bị từ chối hoặc sửa lớn (đổi ≥50% thứ tự ưu tiên/thời lượng) không được tăng.</p></article>
+        <article class="card"><h3>Ý nghĩa quality threshold</h3><p>Ngưỡng ≥2 task, có plan AI xác nhận và đúng hạn giúp NSM không biến thành số lượng click hoặc task nhỏ bị game.</p></article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-top"><div class="num">04</div><div><h2>Retention definition</h2><p>Định nghĩa đầy đủ để hai người nhìn cùng dashboard ra cùng kết luận.</p></div></div>
+      <div class="table-wrap"><table><thead><tr><th>Thành phần</th><th>Định nghĩa</th></tr></thead><tbody>
+        <tr><td>Unit</td><td>Một sinh viên (<code>user_id</code>).</td></tr>
+        <tr><td>Cohort entry</td><td>Tuần đầu sinh viên ghi <code>planned_task_completed_on_time</code>.</td></tr>
+        <tr><td>Return event</td><td><code>planned_task_completed_on_time</code>.</td></tr>
+        <tr><td>Window</td><td>Tuần học: Thứ Hai 00:00 → Chủ Nhật 23:59 theo timezone sinh viên.</td></tr>
+        <tr><td>Threshold</td><td>Ít nhất 2 return events trong mỗi tuần.</td></tr>
+        <tr><td>Segment</td><td>Sinh viên đại học tự đăng ký, học kỳ hoạt động, đã thêm/đồng bộ ≥3 task có deadline.</td></tr>
+      </tbody></table></div>
+      <p class="note">Báo cáo cohort W0 qua W1/W2/W3/W4, thay vì “D7 retention” rời rạc.</p>
+    </section>
+
+    <section>
+      <div class="section-top"><div class="num">05</div><div><h2>Progress loop</h2><p>Lý do quay lại đến từ deadline mới và plan tốt hơn, không phải notification.</p></div></div>
+      <div class="flow" aria-label="Product loop hai chu kỳ">
+        <div class="flow-step">Deadline mới</div><div class="arrow">→</div><div class="flow-step">Thêm task</div><div class="arrow">→</div><div class="flow-step">AI sắp lịch</div><div class="arrow">→</div><div class="flow-step">Xác nhận plan</div><div class="arrow">→</div><div class="flow-step">Hoàn thành đúng hạn</div><div class="arrow">→</div><div class="flow-step">Lưu workload & lịch sử</div><div class="arrow">→</div><div class="flow-step">Plan tuần sau vừa sức hơn</div>
+      </div>
+      <p class="note"><strong>Metric hypothesis:</strong> W1–W4 weekly retention của sinh viên activated sẽ tăng trong 4 tuần sau khi triển khai xác nhận plan và dùng lịch sử workload, vì completion tạo tiến độ hữu hình đồng thời cải thiện gợi ý cho deadline kế tiếp.</p>
+    </section>
+
+    <section>
+      <div class="section-top"><div class="num">06</div><div><h2>Tracking plan</h2><p>Chỉ track event cần để tính metric hoặc kiểm chứng loop.</p></div></div>
+      <div class="table-wrap"><table><thead><tr><th>Event</th><th>Ghi khi nào</th><th>Metric dùng để tính</th></tr></thead><tbody>
+        <tr><td><code>account_created</code></td><td>Backend tạo tài khoản thành công.</td><td>Activation start.</td></tr>
+        <tr><td><code>study_task_added</code></td><td>Task có <code>task_id</code> và <code>due_at</code> được persist.</td><td>Leading indicator; segment.</td></tr>
+        <tr><td><code>study_plan_generated</code></td><td>Plan AI có <code>plan_id</code> được lưu.</td><td>Chẩn đoán funnel.</td></tr>
+        <tr><td><code>study_plan_confirmed</code></td><td>Sinh viên lưu/xác nhận plan.</td><td>Leading indicator; precondition.</td></tr>
+        <tr><td><code>planned_task_started</code></td><td>Task chuyển lần đầu sang <code>in_progress</code>.</td><td>Leading indicator.</td></tr>
+        <tr><td><code>planned_task_completed_on_time</code></td><td>Task hoàn tất, thuộc plan xác nhận, không trễ hạn.</td><td>Activation, NSM, engagement, retention.</td></tr>
+        <tr><td><code>study_plan_suggestion_rejected</code></td><td>Sinh viên từ chối plan; quyết định được lưu.</td><td>Counter-metric.</td></tr>
+        <tr><td><code>study_plan_materially_edited</code></td><td>Lưu plan với thay đổi ≥50% task so với AI draft.</td><td>Counter-metric.</td></tr>
+      </tbody></table></div>
+      <div class="grid" style="margin-top:16px"><article class="card"><h3>Acceptance criterion 1</h3><p>Mỗi <code>user_id + task_id</code> chỉ ghi completion khi chuyển trạng thái thật sự; reload, retry và autosave không tạo event trùng.</p></article><article class="card"><h3>Acceptance criterion 2</h3><p><code>study_plan_confirmed</code> chỉ bắn sau khi backend persist plan có <code>plan_id</code> và ít nhất một task; preview hay lỗi mạng không tính.</p></article></div>
+    </section>
+
+    <footer>Vũ Quang Tiến · MHV 2A202602872 · Day 20 Product Metrics Lab</footer>
+  </main>
+</body>
+</html>
